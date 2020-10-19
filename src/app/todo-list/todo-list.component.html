@@ -1,0 +1,10 @@
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+</head>
+<div class="div1">
+    <h1>Todo List:-</h1>
+    <div class="div2" *ngFor="let todo of todos" (click)="onselect(todo)">
+        <button class="btn">{{todo.title}}</button>
+    </div>
+</div>
+<app-todo-details [todo]="selectedtodo"></app-todo-details>
